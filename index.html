@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
-<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
-<!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
-<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="mh">
         <div class="mhlogo">
@@ -27,16 +29,17 @@
         </div>
         <div class="mhsearch">
             <i class="fa fa-search mhsearchicon" aria-hidden="true"></i>
-            <input type="search" name="search" class="mhsearchinput" placeholder="Search for your favourite group in ATG">
+            <input type="search" name="search" class="mhsearchinput"
+                placeholder="Search for your favourite group in ATG">
         </div>
         <div class="mhright">
-            Create account. 
-            <span class="mhfree">It's free!</span>
+            Create account.
+            <span class="mhfree" onclick="showModal()">It's free!</span>
             <i class="fa fa-caret-down"></i>
         </div>
     </div>
     <div class="mhbottomimg">
-        
+
         <div class="backimg">
             <!-- <img src="main.png" alt=""> -->
             <div class="mhimgtext">
@@ -44,6 +47,65 @@
             </div>
             <div class="mhimgsmalltext">
                 142,765 Computer Engineers follow this
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+
+    </div>
+    <div class="signin">
+        <!-- <span class="cross">&times;</span> -->
+        
+        <span class="close" onclick="closeModal()">
+            <i class="fa fa-times-circle"  aria-hidden="true"></i>
+        </span>
+ 
+        <div class="greenline">
+            Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+        </div>
+        <div class="belowgreenline">
+            <div class="leftside">
+                <h2>Create Account</h2>
+                <form action="">
+                    <div class="firstlastname">    
+                        <input type="text"class="firstname" placeholder="First Name"></input>
+                        <input type="text"class="lastname" placeholder="Last Name"></input>
+                    </div>
+                    <input type="text" class="email"placeholder="Email"></input>
+                    <input type="text" class="password"placeholder="Password"></input>
+                    <input type="text" class="confirmpassword"placeholder="Confirm Password"></input>
+                    <button class="submit">
+                        Creat Account
+                    </button>
+                </form>
+                <div class="facebooklogin facebookloginpadding">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <div class="otherlogincontent">
+    
+                        Sign up with Facebook
+                    </div>
+                                    </div>
+                <div class="facebooklogin">
+                    <i class="fa-brands fa-google"></i>
+                    <div class="otherlogincontent">
+
+                        Sign up with Google
+                    </div>
+                </div>
+            </div>
+            <div class="rightside">
+                <div class="rightsidecontent">    
+                    Already have an account? 
+                    <span class="blue">
+                        Sign In
+                    </span>
+                </div>
+                <div class="vector">
+                    <img src="atg_illustration.png" alt="">
+                </div>
+                <div class="policyterms">
+                    By signing up, you agree to our Terms & conditions, Privacy policy
+                </div>
             </div>
         </div>
     </div>
@@ -62,7 +124,6 @@
             </button>
             <button class="joingroup">
                 <i class="fa-solid fa-users-medical fa-flip-horizontal"></i>
-                <!-- <i class="fas fa-user-plus"></i> -->
                 <i class="fa fa-group"></i>
                 Join Group
             </button>
@@ -72,252 +133,275 @@
 
         <div class="cards">
             <div class="mcards">
-        <div class="cardsimg">
-            <img src="Rectangle1.png" alt="">
-        </div>
-        <div class="cardscontent">
-            <div class="smalltitle">
-                
-                <i class="fas fa-pen"></i>
-                Article
-            </div>
-            <div class="maintitle">
-                <div class="maintitlecontent">
-                    What if famous brands had regular fonts? Meet RegulaBrands!                </div>
-                <div class="dots" onclick="fun()">
-                    <svg  class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                    </svg>
-                </div>  
-                <div class="frame1" id="frame1">
-                    <div class="edit">
-                        Edit
-                    </div>
-                    <div class="report">Report</div>
-                    <div class="option3">Option3</div>
+                <div class="cardsimg">
+                    <img src="Rectangle1.png" alt="">
                 </div>
-            </div>
-            <div class="majorcontent">
-                I’ve worked in UX for the better part of a decade. From now on, I plan to resignasssssssdf from the postI plan to resign from the postI plan to resign froaaaaaaaaaaaaaaaaam the postI plan to resign from the postI plan to resign from the postI plan to resign from the postI plan to resign from the postI plan to resign from the post
-            </div>
-            <div class="lastdiv">
-                <div class="leftprofile">
-                    <div>
-                        <img src="profile1.png" alt="">
+                <div class="cardscontent">
+                    <div class="smalltitle">
+
+                        <i class="fas fa-pen"></i>
+                        Article
                     </div>
-                    <div class="profilename">
-                        Sarthak Kamra
+                    <div class="maintitle">
+                        <div class="maintitlecontent">
+                            What if famous brands had regular fonts? Meet RegulaBrands! </div>
+                        <div class="dots" onclick="fun()">
+                            <svg class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                        <div class="frame1" id="frame1">
+                            <div class="edit">
+                                Edit
+                            </div>
+                            <div class="report" onclick="remove()">Report</div>
+                            <div class="option3">Option3</div>
+                        </div>
                     </div>
-                </div>
-                <div class="rightprofile">
-                    <i class="fa fa-eye"></i>
-                    <div class="views">
-                        1.4k views
+                    <div class="majorcontent">
+                        I’ve worked in UX for the better part of a decade. From now on, I plan to resignasssssssdf from
+                        the postI plan to resign from the postI plan to resign froaaaaaaaaaaaaaaaaam the postI plan to
+                        resign from the postI plan to resign from the postI plan to resign from the postI plan to resign
+                        from the postI plan to resign from the post
                     </div>
-                    <div class="share">
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mcards">
-        <div class="cardsimg">
-            <img src="Rectangle2.png" alt="">
-        </div>
-        <div class="cardscontent">
-            <div class="smalltitle">
-                <!-- <i class='fas fa-microscope'></i> -->
-                <i class="fas fa-microscope"></i>
-                 Education
-            </div>
-            <div class="maintitle">
-                <div class="maintitlecontent">
-                    Tax Benefits for Investment under National Pension Scheme launched by Government                
-                </div>
-                <div class="dots" onclick="fun()">
-                    <svg  class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                    </svg>
-                </div>  
-                <div class="frame1" id="frame1">
-                    <div class="edit">
-                        Edit
-                    </div>
-                    <div class="report">Report</div>
-                    <div class="option3">Option3</div>
-                </div> 
-            </div>
-            <div class="majorcontent">
-                I've worked in UX for the better part of a decade. From now on, I plan to resignasssssssdf from the postI plan to resign from the postI plan to resign froaaaaaaaaaaaaaaaaam the postI plan to resign from the postI plan to resign from the postI plan to resign from the postI plan to resign from the postI plan to resign from the post
-            </div>
-            <div class="lastdiv">
-                <div class="leftprofile">
-                    <div>
-                        <img src="profile2.png" alt="">
-                    </div>
-                    <div class="profilename">
-                        Sarah West
-                    </div>
-                </div>
-                <div class="rightprofile">
-                    <i class="fa fa-eye"></i>
-                    <div class="views">
-                        1.4k views
-                    </div>
-                    <div class="share">
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    <div class="lastdiv">
+                        <div class="leftprofile">
+                            <div>
+                                <img src="profile1.png" alt="">
+                            </div>
+                            <div class="profilename">
+                                Sarthak Kamra
+                            </div>
+                        </div>
+                        <div class="rightprofile">
+                            <i class="fa fa-eye"></i>
+                            <div class="views">
+                                1.4k views
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="mcards">
-        <div class="cardsimg">
-            <img src="Rectangle3.png" alt="">
-        </div>
-        <div class="cardscontent">
-            <div class="smalltitle">
-                <!-- <i class='fas fa-microscope'></i> -->
-                <i class="fa-brands fa-meetup"></i>
-                Meetup
-            </div>
-            <div class="maintitle">
-                <div class="maintitlecontent">
-                    Finance & Investment Elite Social Mixer @Lujiazui                
+            <div class="mcards">
+                <div class="cardsimg">
+                    <img src="Rectangle2.png" alt="">
                 </div>
-                <div class="dots" onclick="fun()">
-                    <svg  class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                    </svg>
-                </div>  
-                <div class="frame1" id="frame1">
-                    <div class="edit">
-                        Edit
+                <div class="cardscontent">
+                    <div class="smalltitle">
+                        <!-- <i class='fas fa-microscope'></i> -->
+                        <i class="fas fa-microscope"></i>
+                        Education
                     </div>
-                    <div class="report">Report</div>
-                    <div class="option3">Option3</div>
-                </div>
-            </div>
-            <div class="datetime">
-                <div class="date">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    Fri, 12 Oct, 2018
-                </div>
-                <div class="venue">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Ahmedabad, India
-                </div>
-            </div>
-            <div class="largebutton">
-                Visite Website
-            </div>
-            <div class="lastdiv">
-                <div class="leftprofile">
-                    <div>
-                        <img src="profile3.png" alt="">
+                    <div class="maintitle">
+                        <div class="maintitlecontent">
+                            Tax Benefits for Investment under National Pension Scheme launched by Government
+                        </div>
+                        <div class="dots" onclick="fun()">
+                            <svg class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                        <div class="frame1" id="frame1">
+                            <div class="edit">
+                                Edit
+                            </div>
+                            <div class="report">Report</div>
+                            <div class="option3">Option3</div>
+                        </div>
                     </div>
-                    <div class="profilename">
-                        Ronal Jones
+                    <div class="majorcontent">
+                        I've worked in UX for the better part of a decade. From now on, I plan to resignasssssssdf from
+                        the postI plan to resign from the postI plan to resign froaaaaaaaaaaaaaaaaam the postI plan to
+                        resign from the postI plan to resign from the postI plan to resign from the postI plan to resign
+                        from the postI plan to resign from the post
                     </div>
-                </div>
-                <div class="rightprofile">
-                    <i class="fa fa-eye"></i>
-                    <div class="views">
-                        1.4k views
-                    </div>
-                    <div class="share">
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    <div class="lastdiv">
+                        <div class="leftprofile">
+                            <div>
+                                <img src="profile2.png" alt="">
+                            </div>
+                            <div class="profilename">
+                                Sarah West
+                            </div>
+                        </div>
+                        <div class="rightprofile">
+                            <i class="fa fa-eye"></i>
+                            <div class="views">
+                                1.4k views
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="mcards">
-        <!-- <div class="cardsimg">
+            <div class="mcards">
+                <div class="cardsimg">
+                    <img src="Rectangle3.png" alt="">
+                </div>
+                <div class="cardscontent">
+                    <div class="smalltitle">
+                        <!-- <i class='fas fa-microscope'></i> -->
+                        <i class="fa-brands fa-meetup"></i>
+                        Meetup
+                    </div>
+                    <div class="maintitle">
+                        <div class="maintitlecontent">
+                            Finance & Investment Elite Social Mixer @Lujiazui
+                        </div>
+                        <div class="dots" onclick="fun()">
+                            <svg class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                        <div class="frame1" id="frame1">
+                            <div class="edit">
+                                Edit
+                            </div>
+                            <div class="report">Report</div>
+                            <div class="option3">Option3</div>
+                        </div>
+                    </div>
+                    <div class="datetime">
+                        <div class="date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Fri, 12 Oct, 2018
+                        </div>
+                        <div class="venue">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Ahmedabad, India
+                        </div>
+                    </div>
+                    <div class="largebutton">
+                        Visite Website
+                    </div>
+                    <div class="lastdiv">
+                        <div class="leftprofile">
+                            <div>
+                                <img src="profile3.png" alt="">
+                            </div>
+                            <div class="profilename">
+                                Ronal Jones
+                            </div>
+                        </div>
+                        <div class="rightprofile">
+                            <i class="fa fa-eye"></i>
+                            <div class="views">
+                                1.4k views
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mcards">
+                <!-- <div class="cardsimg">
             <img src="Rectangle3.png" alt="">
         </div> -->
-        <div class="cardscontent">
-            <div class="smalltitle">
-                <!-- <i class='fas fa-microscope'></i> -->
-                <!-- <i class="fa-brands fa-meetup"></i> -->
-                Job
-            </div>
-            <div class="maintitle">
-                <div class="maintitlecontent">
-                    Software Developer                
-                </div>
-                <div class="dots" onclick="fun()">
-                    <svg  class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                    </svg>
-                </div>  
-                <div class="frame1" id="frame1">
-                    <div class="edit">
-                        Edit
+                <div class="cardscontent">
+                    <div class="smalltitle">
+                        <!-- <i class='fas fa-microscope'></i> -->
+                        <!-- <i class="fa-brands fa-meetup"></i> -->
+                        Job
                     </div>
-                    <div class="report">Report</div>
-                    <div class="option3">Option3</div>
+                    <div class="maintitle">
+                        <div class="maintitlecontent">
+                            Software Developer
+                        </div>
+                        <div class="dots" onclick="fun()">
+                            <svg class="dotsss" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                            </svg>
+                        </div>
+                        <div class="frame1" id="frame1">
+                            <div class="edit">
+                                Edit
+                            </div>
+                            <div class="report">Report</div>
+                            <div class="option3">Option3</div>
+                        </div>
+                    </div>
+                    <div class="datetime">
+                        <div class="date">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            Innovaccer Analytics Private Ltd.
+                        </div>
+                        <div class="venue">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Noida, India
+                        </div>
+                    </div>
+                    <div class="largebutton green">
+                        Apply on Timesjobs
+                    </div>
+                    <div class="lastdiv">
+                        <div class="leftprofile">
+                            <div>
+                                <img src="profile4.png" alt="">
+                            </div>
+                            <div class="profilename">
+                                Joseph Gray
+                            </div>
+                        </div>
+                        <div class="rightprofile">
+                            <i class="fa fa-eye"></i>
+                            <div class="views">
+                                1.4k views
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="datetime">
-                <div class="date">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    Innovaccer Analytics Private Ltd.
-                </div>
-                <div class="venue">
+        </div>
+        <div class="uppercardsright">
+            <div class="uppercardsrightcontent">
+                <div>
+
                     <i class="fa-solid fa-location-dot"></i>
                     Noida, India
                 </div>
-            </div>
-            <div class="largebutton green">
-                Apply on Timesjobs
-            </div>
-            <div class="lastdiv">
-                <div class="leftprofile">
-                    <div>
-                        <img src="profile4.png" alt="">
-                    </div>
-                    <div class="profilename">
-                        Joseph Gray
-                    </div>
-                </div>
-                <div class="rightprofile">
-                    <i class="fa fa-eye"></i>
-                    <div class="views">
-                        1.4k views
-                    </div>
-                    <div class="share">
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="uppercardsright">
-    <div class="uppercardsrightcontent">
-        <div>
+    <script>
+        function fun() {
+            document.getElementById("frame1").style.visibility = "visible";
+            document.getElementById("frame1").classList.add("style")
+            document.getElementsByClassName("dots").classList.add("dotsstyle")
+        }
+        function remove() {
+            document.getElementById("frame1").classList.remove("style")
+            document.getElementById("frame1").style.visibility = "hidden";
+        }
+        function showModal(){
+            document.querySelector('.overlay').classList.add('showoverlay')
+            document.querySelector('.signin').classList.add('showsigninform')
+        }
+        function closeModal(){
+            document.querySelector('.overlay').classList.remove('showoverlay')
+            document.querySelector('.signin').classList.remove('showsigninform')
+        }
+    </script>
+</body>
 
-            <i class="fa-solid fa-location-dot"></i>
-            Noida, India
-        </div>
-        <div>
-            <i class="fa-solid fa-pen"></i>
-        </div>
-    </div>
-</div>
-</div>
-<script>
-    function fun(){
-        document.getElementById("frame1").style.visibility="visible";
-        document.getElementById("frame1").classList.add("style")
-        document.getElementsByClassName("dots").classList.add("dotsstyle")
-    }
-    function remove(){
-        document.getElementById("frame1").classList.remove("style")
-        document.getElementById("frame1").style.visibility="hidden";
-    }
-</script>
-    </body>
 </html>
