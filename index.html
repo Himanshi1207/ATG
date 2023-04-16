@@ -45,7 +45,7 @@
     <div class="overlay">
 
     </div>
-    <div class="signin">
+    <div class="signup">
         <!-- <span class="cross">&times;</span> -->
 
         <span class="close" onclick="closeModal()">
@@ -57,7 +57,7 @@
         </div>
         <div class="belowgreenline">
             <div class="leftside">
-                <h2>Create Account</h2>
+                <h2 class="createaccount">Create Account</h2>
                 <form action="">
                     <div class="firstlastname">
                         <input type="text" class="firstname" placeholder="First Name"></input>
@@ -88,9 +88,9 @@
             <div class="rightside">
                 <div class="rightsidecontent">
                     Already have an account?
-                    <span class="blue">
+                    <a class="blue" id="login">
                         Sign In
-                    </span>
+                    </a>
                 </div>
                 <div class="vector">
                     <img src="images/atg_illustration.png" alt="">
@@ -387,11 +387,25 @@
         }
         function showModal() {
             document.querySelector('.overlay').classList.add('showoverlay')
-            document.querySelector('.signin').classList.add('showsigninform')
+            document.querySelector('.signup').classList.add('showsigninform')
         }
         function closeModal() {
             document.querySelector('.overlay').classList.remove('showoverlay')
-            document.querySelector('.signin').classList.remove('showsigninform')
+            document.querySelector('.signup').classList.remove('showsigninform')
+        }
+        let loginbtn=document.getElementsByClassName("blue")
+        // let signupbtn=document.getElementById("login")
+        let firstname=document.getElementsByClassName("firstname")
+        let lastname=document.getElementsByClassName("lastname")
+        let confirmpassword=document.getElementsByClassName("confirmpassword")
+        let createaccount=document.getElementsByClassName("createaccount")
+        loginbtn.onclick=function(){
+            firstname.style.maxHeight="0";
+            firstname.style.padding="0";
+            lastname.style.maxHeight="0";
+            lastname.style.padding="0";
+
+            confirmpassword.style.maxHeight="0";
         }
     </script>
 </body>
